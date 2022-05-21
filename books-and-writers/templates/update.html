@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+
+
+  <br>
+  <br>
+         <div>
+             <h3> Update Process </h3>
+                     <br>
+                     <br>
+
+            <form  method = "post" >
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" name="new_book" class="form-control" placeholder="Enter the name of book">
+                    </div>
+                    <div class="col">
+                      <input type="text" name="new_writer" class="form-control" placeholder="Enter the name of writer">
+
+                    </div>
+
+                  </div>
+                <br>
+                <br>
+                <br>
+                  <button  type="submit" class="btn btn-danger"> Update </button>
+                  <a href = "/show" type="button" class="btn btn-success">Retrun</a>
+            <br>
+            <br>
+            </form>
+
+{% endblock body %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+
+  <br>
+  <br>
+         <div>
+             <h3> Books and Writers </h3>
+                     <br>
+
+            <form action="/add"  method = "post" >
+                 <div class="form-group">
+                     <label for="formGroupExampleInput">Name Of Book</label>
+                     <input type="text" class="form-control" name = "book" id="formGroupExampleInput" >
+                     </div>
+                 <div class="form-group">
+                     <label for="formGroupExampleInput2">Name Of Writer</label>
+                     <input type="text" class="form-control" name = "writer"  id="formGroupExampleInput2">
+                </div>
+             <button type="submit" class="btn btn-danger">Submit</button>
+             <a href = "/show" type="button" class="btn btn-primary">Show</a>
+            <br>
+            <br>
+            </form>
+
+{% endblock body %}

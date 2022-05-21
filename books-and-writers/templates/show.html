@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<br>
+<br>
+
+         <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Books</th>
+              <th scope="col">Writers</th>
+              <th scope="col">Update</th>
+               <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+
+                 {% for row  in list_of_data %}
+
+                    <tr>
+                       <th scope="row">{{row.id}}</th>
+                       <td>{{row.name_of_book}}</td>
+                       <td>{{row.name_of_writer}}</td>
+                       <td><a href = "/update/{{row.id}}" class = "btn btn-danger">Update</a></td>
+                       <td><a href = "/delete/{{row.id}}" class = "btn btn-danger">Delete</a></td>
+                    </tr>
+
+                {% endfor %}
+
+             <a href = "/" type="button" class="btn btn-success">Return</a>
+
+
+          </tbody>
+        </table>
+
+
+
+
+{% endblock body %}
